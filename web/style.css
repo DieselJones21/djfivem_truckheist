@@ -1,0 +1,104 @@
+@font-face {
+    font-family: inherit;
+}
+
+:root {
+    --ink: #f4efe4;
+    --muted: #c4b8a4;
+    --amber: #e3a21a;
+    --bar: #f0b429;
+    --danger: #d45b3a;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#hud {
+    position: absolute;
+    left: 50%;
+    top: 3.4vh;
+    transform: translateX(-50%);
+    width: min(420px, 86vw);
+}
+
+.hud-card {
+    background: linear-gradient(180deg, rgba(16, 14, 12, 0.88), rgba(12, 10, 9, 0.78));
+    border: 1px solid rgba(227, 162, 26, 0.35);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    padding: 12px 14px 10px;
+    color: var(--ink);
+}
+
+.hud-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.14em;
+    font-size: 11px;
+    color: var(--amber);
+}
+
+#hud-percent {
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+}
+
+#hud-title {
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+#hud-objective {
+    margin: 4px 0 10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.bar-track {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+}
+
+#hud-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--danger), var(--bar));
+    transition: width 350ms ease;
+}
+
+.hud-stages {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: rgba(244, 239, 228, 0.35);
+}
+
+.hud-stages span.active {
+    color: var(--amber);
+}
+
+.hud-stages span.done {
+    color: #8fd18f;
+}

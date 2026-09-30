@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="hud" class="hidden">
+        <div class="hud-card">
+            <div class="hud-top">
+                <span class="hud-kicker">ACTIVE SCORE</span>
+                <span id="hud-percent">0%</span>
+            </div>
+            <div id="hud-title">TRUCK HEIST</div>
+            <div id="hud-objective">Waiting for orders</div>
+            <div class="bar-track">
+                <div id="hud-fill"></div>
+            </div>
+            <div class="hud-stages">
+                <span data-stage="locate">STEAL</span>
+                <span data-stage="deliver">HAUL</span>
+                <span data-stage="search">SEARCH</span>
+                <span data-stage="fence">FENCE</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
